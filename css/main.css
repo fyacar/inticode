@@ -1,0 +1,557 @@
+
+body{
+    margin: 1.5em;
+    font-family: 'Poppins', sans-serif;       
+
+}
+.flotante{
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+.wspflotante{
+    z-index: 200;
+    width: 50px;
+}
+a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-img{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: url("../imgs/fondocelIntiCode.png");
+    background-size: cover;
+    background-position-x: 50%;   
+    background-position-y: 130px; 
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: introLoad 2.5s forwards;    
+}
+
+.logo{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;      
+    animation: moveDownLogo 1s ease-in-out forwards;
+    
+}
+.redText{
+color:red;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;  
+    margin-bottom:5em;
+
+}
+
+header svg {
+    width: 1.8em;    
+    cursor: pointer;
+    
+}
+
+nav{
+   position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 2;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+.btnCerrar{
+    width: 2em;
+    margin: 2em;
+    float: right;    
+    cursor: pointer;
+}
+
+
+nav ul{
+    list-style-type: none;
+    padding: 0%;
+    margin-top: 8em;
+}
+
+ul a {
+    color:black;
+    padding: .75em 2em;
+    display: block;
+   
+}
+nav ul a:hover{
+    background-color: red;
+    color:white;
+}
+ 
+.hero{
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+
+    
+
+}
+.arrow{
+    stroke: white; 
+    position: absolute;
+    bottom: 20%; 
+    width: 1em;
+    height: 8em;
+    animation: moveArrow 1s alternate-reverse infinite;
+
+}
+.arrow path {
+    fill: white;
+}
+
+.mensaje{   
+   
+    font-size: 2rem;
+    margin-top: 2em;
+    line-height: 2.5rem;
+    width: 20rem;
+
+}
+
+.subhead{
+    font-size: 1.1rem;
+    margin-top: 2em;
+    width: 15em;
+    font-weight: bold;
+    color:black;    
+    padding: .3em;
+    padding-left: 1rem;
+    background-color: rgba(197, 186, 186, 0.562);
+}
+.more-info{
+    margin-top: -3em;
+}
+
+.cursosTxt{
+    text-align: center;
+    color:red;
+    font-weight: bold;
+    font-size: 1.5rem;      
+}
+
+.more-info img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;    
+    background-color: #720606ef;
+    padding: .3em;
+    padding-left: .5em;
+}
+.desc{
+    line-height: 1.55em;
+    font-size: .9rem;   
+    
+}
+.descripcionCurso{
+    width: fit-content; 
+    color: rgb(209, 1, 1);
+    font-weight: bold;
+}
+
+.detallesCurso{
+    background-color: rgba(217, 4, 4, 0.427);
+    padding: 1em;
+    margin-bottom: 1em;
+    
+}
+.botonOcultar{
+    width: 100%;
+    
+    font-size: .2em;
+}
+.img-curso{
+    margin-top: 1em;
+    max-height: 150px ;
+ 
+}
+.masInfoWsp{
+    font-size: .8rem;
+    font-weight: bold;
+    text-align: center;
+}
+.masInfoWsp a {
+    font-size: 1.3em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 24px;
+    background-color: #16c103d3;
+    color: rgba(255, 255, 255, 0.849);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    border:1px solid black;
+}
+.masInfoWsp img{
+    width: 18px;
+    margin-right: 8px;
+}
+#img-roblox{
+   
+}
+.container {
+    text-align: center;
+  }
+  
+.boton {
+    background-color: #d30808; 
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    
+  }
+  
+.boton:hover {
+    background-color: #0d6bef;
+  }
+
+
+
+.contenidoVerMas{
+    border-radius: 0%;
+    padding: 2em;   
+    display: none;
+}
+
+
+.open-nav{
+    transform: translatex(0);
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    
+}
+.tituloSeccionContacto{
+    font-weight: bold;   
+}
+
+.contacto-wsp{
+    display: flex;
+    flex-direction:column;
+    align-items: center; 
+    justify-content: center;  
+  
+}
+.logowspcontacto{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-top: 6px;
+}
+
+.copiarTexto{
+    display: flex;
+}
+.contactowspimagen{
+    width: 45vh;
+}
+.numCel{
+    font-size: 1.3rem;    
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.img-copiar{
+    margin-top: 5px;
+    width: 20px;   
+}
+.contacto-ig{
+    display: flex;
+    flex-direction:column;
+    align-items: center; 
+    justify-content: center;  
+  
+}
+
+.contactoigimagen{
+    width: 45vh;
+}
+.contacto-fb{
+    display: flex;
+    flex-direction:column;
+    align-items: center; 
+    justify-content: center;  
+  
+}
+
+.contactofbimagen{
+    width: 45vh;
+}
+.textoqrfb{
+    margin-top: -10px;
+}
+footer{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    background-color: rgba(221, 204, 220, 0.402);
+    padding-bottom: .8em;
+}
+
+footer p {    
+    font-size: .75rem;
+}
+.iconFooterContenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    
+}
+.iconFooterContenedor a{
+    font-size: .9rem; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 9px;
+
+}
+.iconFooter{
+    width: 20px;
+    margin-right: 15px;    
+   
+}
+
+.pngInticode{
+    width: 140px;
+    height: 100px;
+}
+
+
+@media only screen and (min-width: 680px){
+    body{
+        margin: 2.5em 7em;
+        font-family: 'Poppins', sans-serif; 
+    }
+    .arrow{
+        margin-top: 0;
+    }
+    .hero-img{       
+        position: absolute;
+        top:0;
+        left: 0;
+        background: url("../imgs/heroIntiCode.png");
+        background-size: cover;
+        background-position-x: 40%;       
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        animation: introLoad 2.5s forwards;    
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px){
+    .contenedor{
+        width: 100%;
+        margin: 0 auto;   
+    }
+    .arrow{
+        margin-top: 4em;
+    }
+    .menu{
+        display: none;
+    }
+
+    nav{
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .btnCerrar{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        margin:0; 
+    }
+    nav ul a{
+        color: white;
+        padding: .5em 1.5em;
+        font-size: 1.2rem;        
+             
+    }
+    nav ul a:hover{
+        text-decoration: none;
+        background: none;
+        background-color: black;
+        padding: .8rem;
+        border-radius: 10%;
+        color:red;
+        font-weight: bold;        
+        transform: scale(1.1);        
+        transition: transform .15s ease-in-out;
+    }
+
+    .hero-img{
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 35em;        
+    }
+
+    .logo{
+        color:black;        
+    }
+
+    .hero{
+        color: black;
+    }
+
+    .arrow{
+        stroke: black;
+        position: unset;
+    }
+    .arrow path{
+        fill: black;
+    }
+
+    .feature{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        gap: 3em;
+        margin-bottom: 1em;        
+    }
+    .feature img{
+        width: 25em;
+        align-self: center;
+    }
+    .greenShow{
+        background-position-y:-20px ;
+    }
+
+    .feature.left{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-areas: "left right";       
+        gap: 3em;
+     
+    }
+    .feature.left img{
+        grid-area: left;
+    }
+    .feature.left .content{
+        text-align: left;
+        width: 25em;
+        justify-self: left;
+    }    
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;       
+        align-items: baseline;    
+        
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+
+    .contenedor{
+        width: 100%;
+        margin: 0 auto;   
+    }
+
+    .feature{
+        gap: 30px;
+    }
+    .arrow{
+        margin-top: 3em;
+    }
+
+    .redText{
+        color:red;
+    }
+
+    .mensaje{
+        width: 28rem;
+    }
+    .subhead{
+        width: 23rem;
+    }
+    .arrow{
+        margin-top: 6.5rem;
+    }
+
+}
+
+
+@keyframes introLoad{
+    from{
+        clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+
+
+@keyframes moveArrow{
+    from{
+       transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveDown{
+    from{
+       transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+@keyframes moveDownLogo{
+    from{
+       transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
